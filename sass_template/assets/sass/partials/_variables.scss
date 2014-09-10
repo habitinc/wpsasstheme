@@ -1,0 +1,40 @@
+// ******** Stylesheet: Variables ******** */
+
+// Author: Habit
+// Resuable style variables.
+
+// Suggested naming convention:
+// $type-general-specific
+// ex:
+//   $color-blue
+//	 $color-blue-dark
+//   $color-blue-light
+
+
+// ==========================================================================
+//   Colors
+// ========================================================================== */
+$color-alert-yellow: #ebe16f;
+$color-alert-red:    #fbe3e4;
+$color-alert-green:  #e6efc2;
+$color-alert-blue:   #d5edf8;
+
+$color-black:        #323944;
+$color-white:        #fff;
+
+$color-gray:         #eaedf2;
+$color-gray-light:   #f8f9fa;
+$color-gray-text:    #5c6b80;
+
+$color-green:        #7dd667;
+
+$color-link:        $color-green;
+$color-link-hover:  darken($color-link, 20%);
+
+
+// ==========================================================================
+//   Structure
+// ========================================================================== */
+
+$height-footer: 50px;
+$height-footer-negative: -50px;

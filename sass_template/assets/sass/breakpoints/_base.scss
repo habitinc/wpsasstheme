@@ -1,0 +1,71 @@
+// ******** Stylesheet: Base Stylesheet ******** */
+// Author: Habit
+
+/* ==========================================================================
+   Sticky Footer Styles
+   ========================================================================== */
+html, body {
+	height: 100%;
+}
+
+#page {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto $height-footer-negative; /*negative margin the height of the footer*/
+}
+
+.push {
+	height: $height-footer;
+	clear: both;
+}
+
+.site-footer {
+	@extend .push;
+	background-color: $color-black;
+}
+
+/* ==========================================================================
+   General Styles
+   ========================================================================== */
+body {
+	color: $color-black;
+	
+	p {
+		color: $color-green;
+	}
+}
+
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+a {
+	color: $color-link;
+	text-decoration: none;
+	
+	&:hover {
+		color: $color-link-hover;
+	}
+}
+ 
+/* ==========================================================================
+   Header Styles
+   ========================================================================== */
+.site-header {
+	background-color: $color-black;
+	height: 75px;
+} 
+
+.banner {
+	@include background-image('ColourPhoto.jpg', cover, no-repeat);
+	
+	height: 250px;
+	width: 100%;
+}
+   
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */

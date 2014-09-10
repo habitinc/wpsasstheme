@@ -1,0 +1,103 @@
+/* **************************************************************************
+   Site Name: NAME ME
+   Author: Habit
+
+   Stylesheet: Main Stylesheet
+
+   More on SASS: http://sass-lang.com/guide
+   More on COMPASS: http://compass-style.org/install/
+   ************************************************************************** */
+
+/* ==========================================================================
+   IMPORTING PARTIALS
+   
+   These files are needed at the beginning so that we establish all
+   our mixins, variables, and typography that we'll be using 
+   across the whole project.
+   ========================================================================== */
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// typography
+@import "partials/typography";
+
+// import mixins
+@import "partials/mixins";
+
+
+/* ==========================================================================
+   BASE STYLES
+   
+   Since we support lower versions of IE, we cannot design Mobile first.
+   Base styles are essentially desktop styles.
+   ========================================================================== */
+   
+// styles in _base.scss
+@import "breakpoints/base";
+
+/* ==========================================================================
+   Tablet Styles (iPads - portrait and landscape)
+   ========================================================================== */
+@media (max-width : 1024px) {
+
+	// styles in _1024down.scss
+	@import "breakpoints/1024down";
+}
+
+/* ==========================================================================
+   Mobile Styles (Smartphones - portrait and landscape)
+   ========================================================================== */
+@media (max-width : 480px) {
+
+	// styles in _480down.scss
+	@import "breakpoints/480down";
+}
+
+/* ==========================================================================
+   Retina Styles - ALL SIZES
+   ========================================================================== */
+@media
+(-webkit-min-device-pixel-ratio: 2),
+( min--moz-device-pixel-ratio: 2),
+( -o-min-device-pixel-ratio: 2/1),
+( min-device-pixel-ratio: 2),
+( min-resolution: 192dpi),
+( min-resolution: 2dppx) { 
+
+	// styles in _2x.scss
+	@import "breakpoints/2x";
+}
+
+/* ==========================================================================
+   Retina Styles - TABLET
+   ========================================================================== */
+@media
+(-webkit-min-device-pixel-ratio: 2) and (max-width : 1024px),
+( min--moz-device-pixel-ratio: 2) and (max-width : 1024px),
+( -o-min-device-pixel-ratio: 2/1) and (max-width : 1024px),
+( min-device-pixel-ratio: 2) and (max-width : 1024px),
+( min-resolution: 192dpi) and (max-width : 1024px),
+( min-resolution: 2dppx) and (max-width : 1024px) {
+ 
+	// styles in _1024down-2x.scss
+	@import "breakpoints/1024down2x";
+}
+
+/* ==========================================================================
+   Retina Styles - MOBILE
+   ========================================================================== */
+@media
+(-webkit-min-device-pixel-ratio: 2) and (max-width : 480px),
+( min--moz-device-pixel-ratio: 2) and (max-width : 480px),
+( -o-min-device-pixel-ratio: 2/1) and (max-width : 480px),
+( min-device-pixel-ratio: 2) and (max-width : 480px),
+( min-resolution: 192dpi) and (max-width : 480px),
+( min-resolution: 2dppx) and (max-width : 480px) { 
+
+	// styles in _480down-2x.scss
+	@import "breakpoints/480down2x";
+}

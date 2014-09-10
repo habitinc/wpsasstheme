@@ -1,0 +1,44 @@
+// ******** Stylesheet: Mixins Stylesheet ******** */
+// Author: Habit
+
+// ==========================================================================
+//   Gradients
+// ========================================================================== */
+// To use: @include css-gradient(#dfdfdf,#f8f8f8);
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+
+// ==========================================================================
+//   Background Image
+// ========================================================================== */
+// To use: @include background-image(path, size, repeat, position); */
+@mixin background-image($image_file: 'test.jpg', $size: cover, $repeat: no-repeat) {
+	background-size: $size;
+	background-image: image_url($image_file);
+	background-repeat: $repeat;
+	background-position: center center;
+}
+
+// ==========================================================================
+//   Structure
+// ========================================================================== */
+// To use: @include inline-block; */
+@mixin inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	/*IE 7 hacks*/
+	zoom: 1;
+	*display: inline;
+}
+
+
+
+
