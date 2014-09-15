@@ -26,19 +26,5 @@
 	background-position: center center;
 }
 
-// ==========================================================================
-//   Structure
-// ========================================================================== */
-// To use: @include inline-block; */
-@mixin inline-block {
-	display: -moz-inline-stack;
-	display: inline-block;
-	vertical-align: top;
-	/*IE 7 hacks*/
-	zoom: 1;
-	*display: inline;
-}
-
-
 
 

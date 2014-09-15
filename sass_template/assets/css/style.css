@@ -212,69 +212,131 @@ table {
 /* ==========================================================================
    Sticky Footer Styles
    ========================================================================== */
-/* line 7, ../sass/breakpoints/_base.scss */
+/* line 10, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
 }
 
-/* line 11, ../sass/breakpoints/_base.scss */
+/* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 #page {
+  clear: both;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -50px;
-  /*negative margin the height of the footer*/
+  margin-bottom: -50px;
 }
-
-/* line 18, ../sass/breakpoints/_base.scss */
-.push, .site-footer {
+/* line 18, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
+#page .push {
   height: 50px;
-  clear: both;
 }
 
-/* line 23, ../sass/breakpoints/_base.scss */
+/* line 20, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
 .site-footer {
-  background-color: #323944;
+  clear: both;
+  position: relative;
+  height: 50px;
 }
 
 /* ==========================================================================
    General Styles
    ========================================================================== */
-/* line 31, ../sass/breakpoints/_base.scss */
+/* line 13, ../sass/breakpoints/_base.scss */
 body {
   color: #323944;
 }
-/* line 34, ../sass/breakpoints/_base.scss */
+/* line 16, ../sass/breakpoints/_base.scss */
 body p {
   color: #7dd667;
 }
 
-/* line 40, ../sass/breakpoints/_base.scss */
+/* line 22, ../sass/breakpoints/_base.scss */
 .wrapper {
   width: 800px;
   margin: 0 auto;
 }
 
-/* line 45, ../sass/breakpoints/_base.scss */
+/* line 27, ../sass/breakpoints/_base.scss */
 a {
   color: #7dd667;
   text-decoration: none;
 }
-/* line 49, ../sass/breakpoints/_base.scss */
+/* line 31, ../sass/breakpoints/_base.scss */
 a:hover {
   color: #46a92e;
+}
+
+/* line 36, ../sass/breakpoints/_base.scss */
+h1, h2, h3, h4 {
+  font-family: "OfficinaSansITCW01-Book 734509", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* line 44, ../sass/breakpoints/_base.scss */
+.float-left {
+  float: left;
+}
+
+/* line 49, ../sass/breakpoints/_base.scss */
+.float-left {
+  float: none;
+}
+
+/* line 55, ../sass/breakpoints/_base.scss */
+.pop-up, .alert {
+  border: 1px solid #323944;
+  padding: 25px;
+}
+
+/* line 60, ../sass/breakpoints/_base.scss */
+.pop-up.error, .error.alert {
+  color: red;
+}
+
+/* line 64, ../sass/breakpoints/_base.scss */
+.alert {
+  background-color: #ff9b9b;
+}
+
+/* line 71, ../sass/breakpoints/_base.scss */
+.pop-up a.confirm, .alert a.confirm {
+  background-color: #7dd667;
+}
+
+/* line 81, ../sass/breakpoints/_base.scss */
+.width-1-columns {
+  width: 25%;
+}
+
+/* line 81, ../sass/breakpoints/_base.scss */
+.width-2-columns {
+  width: 50%;
+}
+
+/* line 81, ../sass/breakpoints/_base.scss */
+.width-3-columns {
+  width: 75%;
+}
+
+/* line 81, ../sass/breakpoints/_base.scss */
+.width-4-columns {
+  width: 100%;
+}
+
+/* line 92, ../sass/breakpoints/_base.scss */
+.columns, .width-1-columns, .width-2-columns, .width-3-columns {
+  margin-right: 25px;
 }
 
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 57, ../sass/breakpoints/_base.scss */
+/* line 99, ../sass/breakpoints/_base.scss */
 .site-header {
   background-color: #323944;
   height: 75px;
 }
 
-/* line 62, ../sass/breakpoints/_base.scss */
+/* line 104, ../sass/breakpoints/_base.scss */
 .banner {
   background-size: cover;
   background-image: url('../../images/ColourPhoto.jpg?1407355376');
@@ -284,9 +346,24 @@ a:hover {
   width: 100%;
 }
 
+/* line 111, ../sass/breakpoints/_base.scss */
+#inline-block {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
+/* line 118, ../sass/breakpoints/_base.scss */
+.site-footer {
+  background-color: #323944;
+  color: #fff;
+}
+
 /* ==========================================================================
    Tablet Styles (iPads - portrait and landscape)
    ========================================================================== */

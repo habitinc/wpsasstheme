@@ -4,26 +4,8 @@
 /* ==========================================================================
    Sticky Footer Styles
    ========================================================================== */
-html, body {
-	height: 100%;
-}
+@include sticky-footer(50px, "#page", ".push", ".site-footer");
 
-#page {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto $height-footer-negative; /*negative margin the height of the footer*/
-}
-
-.push {
-	height: $height-footer;
-	clear: both;
-}
-
-.site-footer {
-	@extend .push;
-	background-color: $color-black;
-}
 
 /* ==========================================================================
    General Styles
@@ -50,7 +32,67 @@ a {
 		color: $color-link-hover;
 	}
 }
- 
+
+#{headings(1,4)} {
+	font: {
+		family: $font-officiana-book;
+		weight: normal;
+	}
+	
+}
+
+.float-left {
+	@include float-left;
+}
+
+/// You can also re-set the floats when you don't need them any more.
+.float-left {
+	@include reset-float;
+}
+
+
+// Use @extend
+.pop-up {
+	border: 1px solid $color-black;
+	padding: 25px;
+}
+
+.pop-up.error {
+	color: red;
+}
+
+.alert {
+	@extend .pop-up;
+	
+	background-color: #ff9b9b;
+}
+
+// You can also use non-generated placeholder styles with @extend
+.pop-up a%button {
+	background-color: $color-green;
+}
+
+.confirm {
+	@extend %button;
+}
+
+// You can make loops as well
+@for $i from 1 through 4 {
+	.width-#{$i}-columns {
+		width: 25% * $i;
+		
+		// with conditional statements
+		@if $i != 4 {
+			@extend .columns;
+		}
+		
+	}
+}
+
+.columns {
+	margin-right: 25px;
+}
+
 /* ==========================================================================
    Header Styles
    ========================================================================== */
@@ -60,12 +102,20 @@ a {
 } 
 
 .banner {
-	@include background-image('ColourPhoto.jpg', cover, no-repeat);
+	@include background-image($image_file: 'ColourPhoto.jpg', $size: cover, $repeat: no-repeat);
 	
 	height: 250px;
 	width: 100%;
+}
+
+#inline-block {
+	@include inline-block;
 }
    
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
+.site-footer {
+	background-color: $color-black;
+	color: $color-white;
+}
