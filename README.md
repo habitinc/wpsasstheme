@@ -6,10 +6,10 @@ To use, follow the instructions on how to set up COMPASS on your computer [here]
 
 After that is installed, you are ready to begin. 
 
-In the command line, navigate to the assets folder and watch the SASS folder for changes.
+In the command line, navigate to the theme folder and watch for changes.
 
 ```php
-$ compass watch sass
+$ compass watch
 ```
 Now you are ready to edit the SCSS files.
 
