@@ -1,30 +1,76 @@
-// ******** Stylesheet: Mixins Stylesheet ******** */
+// ******** Stylesheet: Mixins Stylesheet ******** //
 // Author: Habit
 
 // ==========================================================================
-//   Gradients
-// ========================================================================== */
-// To use: @include css-gradient(#dfdfdf,#f8f8f8);
-@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
-	background-color: $to;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background-image: -webkit-linear-gradient(top, $from, $to);
-	background-image: -moz-linear-gradient(top, $from, $to);
-	background-image: -o-linear-gradient(top, $from, $to);
-	background-image: linear-gradient(to bottom, $from, $to);
+//  Gradients
+//   To use: @include css-vertical-gradient(#dfdfdf, #f8f8f8);
+// ==========================================================================
+@mixin css-vertical-gradient($from, $to) {	
+	@include background-image(linear-gradient($from, $to));
 }
 
+@mixin css-horizontal-gradient($from, $to) {	
+	@include background-image(linear-gradient(to right, $from, $to));
+}
+
+@mixin css-radial-gradient($from, $to) {	
+	@include background-image(radial-gradient(45px 45px, $to 10px, $from 30px));
+}
 
 // ==========================================================================
-//   Background Image
-// ========================================================================== */
-// To use: @include background-image(path, size, repeat, position); */
-@mixin background-image($image_file: 'test.jpg', $size: cover, $repeat: no-repeat) {
+//  Background Image
+//   To use: @include my-background-image(path, size, repeat, position);
+// ==========================================================================
+@mixin my-background-image($image_file: 'test.jpg', $size: cover, $repeat: no-repeat) {
 	background-size: $size;
-	background-image: image_url($image_file);
+	@include background-image(image-url($image_file));
 	background-repeat: $repeat;
 	background-position: center center;
 }
 
+// ==========================================================================
+//  Horizontal List
+//   To use: @include horizontal-list;
+// ==========================================================================
+@mixin horizontal-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	
+	li {
+		display: block;
+		float: left;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+// ==========================================================================
+//  Opacity (Compass Mixin)
+//   To use: @include opacity($value);
+//  example: @include opacity(0.5);
+// ==========================================================================
 
 
+// ==========================================================================
+//  Animation (Compass Mixin)
+//   To use: @include animation($name $duration $timing-function $delay $iteration-count $animation-direction);
+//  example: @include animation(myAnimation 5s);
+// ==========================================================================
+
+
+// ==========================================================================
+//  Transition (Compass Mixin)
+//    To use: @include transition($property, $duration, $function, $delay);
+//   example: @include transition(width 3s linear 1s);
+// ==========================================================================
+
+
+// ==========================================================================
+//  Border Radius (Compass Mixin)
+//    To use: @include border-radius($radius: 5px);
+//   example: @include border-radius(5px);
+//            @include border-radius(5px 2px 3px 1px);
+// ==========================================================================

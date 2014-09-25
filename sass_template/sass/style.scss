@@ -6,10 +6,10 @@ Description: Base Wordpress theme to use a SASS styles structure.
 Version: 1.0
 */
 
-/* **************************************************************************
-   More on SASS: http://sass-lang.com/guide
-   More on COMPASS: http://compass-style.org/install/
-   ************************************************************************** */
+// **************************************************************************
+//   More on SASS: http://sass-lang.com/guide
+//   More on COMPASS: http://compass-style.org/install/
+// ************************************************************************** //
 
 
 // ==========================================================================
@@ -18,7 +18,7 @@ Version: 1.0
 //   These files are needed at the beginning so that we establish all
 //   our mixins, variables, and typography that we'll be using 
 //   across the whole project.
-// ========================================================================== */
+// ========================================================================== //
 
 @import "compass";
 

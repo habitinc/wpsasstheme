@@ -1,4 +1,4 @@
-// ******** Stylesheet: Base Stylesheet ******** */
+// ******** Stylesheet: Base Stylesheet ******** //
 // Author: Habit
 
 /* ==========================================================================
@@ -16,6 +16,13 @@ body {
 	p {
 		color: $color-green;
 	}
+}
+
+.test {
+	@include css-radial-gradient(#dfdfdf, #b90000);
+	
+	height: 100px;
+	width: 100px;
 }
 
 
@@ -102,7 +109,7 @@ a {
 } 
 
 .banner {
-	@include background-image($image_file: 'ColourPhoto.jpg', $size: cover, $repeat: no-repeat);
+	@include my-background-image($image_file: 'ColourPhoto.jpg', $size: cover, $repeat: no-repeat);
 	
 	height: 250px;
 	width: 100%;
@@ -118,4 +125,13 @@ a {
 .site-footer {
 	background-color: $color-black;
 	color: $color-white;
+}
+
+
+.dl-menu ul {
+	@include horizontal-list;
+	
+	li {
+		margin-right: 20px;
+	}
 }

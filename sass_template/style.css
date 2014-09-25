@@ -5,10 +5,6 @@ Author URI: http://www.habitHQ.ca
 Description: Base Wordpress theme to use a SASS styles structure. 
 Version: 1.0
 */
-/* **************************************************************************
-   More on SASS: http://sass-lang.com/guide
-   More on COMPASS: http://compass-style.org/install/
-   ************************************************************************** */
 /* ==========================================================================
    IMPORTING PARTIALS
    
@@ -251,80 +247,91 @@ body p {
   color: #7dd667;
 }
 
-/* line 22, sass/breakpoints/_base.scss */
+/* line 21, sass/breakpoints/_base.scss */
+.test {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjQ1cHgiIGN5PSI0NXB4IiByPSIzMCUiPjxzdG9wIG9mZnNldD0iMzMuMzMzMzMlIiBzdG9wLWNvbG9yPSIjYjkwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGZkZmRmIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(45px 45px, #b90000 10px, #dfdfdf 30px);
+  background-image: -webkit-radial-gradient(45px 45px, #b90000 10px, #dfdfdf 30px);
+  background-image: radial-gradient(45px 45px, #b90000 10px, #dfdfdf 30px);
+  height: 100px;
+  width: 100px;
+}
+
+/* line 29, sass/breakpoints/_base.scss */
 .wrapper {
   width: 800px;
   margin: 0 auto;
 }
 
-/* line 27, sass/breakpoints/_base.scss */
+/* line 34, sass/breakpoints/_base.scss */
 a {
   color: #7dd667;
   text-decoration: none;
 }
-/* line 31, sass/breakpoints/_base.scss */
+/* line 38, sass/breakpoints/_base.scss */
 a:hover {
   color: #46a92e;
 }
 
-/* line 36, sass/breakpoints/_base.scss */
+/* line 43, sass/breakpoints/_base.scss */
 h1, h2, h3, h4 {
   font-family: "OfficinaSansITCW01-Book 734509", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
-/* line 44, sass/breakpoints/_base.scss */
+/* line 51, sass/breakpoints/_base.scss */
 .float-left {
   float: left;
 }
 
-/* line 49, sass/breakpoints/_base.scss */
+/* line 56, sass/breakpoints/_base.scss */
 .float-left {
   float: none;
 }
 
-/* line 55, sass/breakpoints/_base.scss */
+/* line 62, sass/breakpoints/_base.scss */
 .pop-up, .alert {
   border: 1px solid #323944;
   padding: 25px;
 }
 
-/* line 60, sass/breakpoints/_base.scss */
+/* line 67, sass/breakpoints/_base.scss */
 .pop-up.error, .error.alert {
   color: red;
 }
 
-/* line 64, sass/breakpoints/_base.scss */
+/* line 71, sass/breakpoints/_base.scss */
 .alert {
   background-color: #ff9b9b;
 }
 
-/* line 71, sass/breakpoints/_base.scss */
+/* line 78, sass/breakpoints/_base.scss */
 .pop-up a.confirm, .alert a.confirm {
   background-color: #7dd667;
 }
 
-/* line 81, sass/breakpoints/_base.scss */
+/* line 88, sass/breakpoints/_base.scss */
 .width-1-columns {
   width: 25%;
 }
 
-/* line 81, sass/breakpoints/_base.scss */
+/* line 88, sass/breakpoints/_base.scss */
 .width-2-columns {
   width: 50%;
 }
 
-/* line 81, sass/breakpoints/_base.scss */
+/* line 88, sass/breakpoints/_base.scss */
 .width-3-columns {
   width: 75%;
 }
 
-/* line 81, sass/breakpoints/_base.scss */
+/* line 88, sass/breakpoints/_base.scss */
 .width-4-columns {
   width: 100%;
 }
 
-/* line 92, sass/breakpoints/_base.scss */
+/* line 99, sass/breakpoints/_base.scss */
 .columns, .width-1-columns, .width-2-columns, .width-3-columns {
   margin-right: 25px;
 }
@@ -332,13 +339,13 @@ h1, h2, h3, h4 {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 99, sass/breakpoints/_base.scss */
+/* line 106, sass/breakpoints/_base.scss */
 .site-header {
   background-color: #323944;
   height: 75px;
 }
 
-/* line 104, sass/breakpoints/_base.scss */
+/* line 111, sass/breakpoints/_base.scss */
 .banner {
   background-size: cover;
   background-image: url('images/ColourPhoto.jpg?1407355376');
@@ -348,7 +355,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* line 111, sass/breakpoints/_base.scss */
+/* line 118, sass/breakpoints/_base.scss */
 #inline-block {
   display: inline-block;
   vertical-align: middle;
@@ -360,10 +367,31 @@ h1, h2, h3, h4 {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 118, sass/breakpoints/_base.scss */
+/* line 125, sass/breakpoints/_base.scss */
 .site-footer {
   background-color: #323944;
   color: #fff;
+}
+
+/* line 131, sass/breakpoints/_base.scss */
+.dl-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* line 41, sass/partials/_mixins.scss */
+.dl-menu ul li {
+  display: block;
+  float: left;
+}
+/* line 44, sass/partials/_mixins.scss */
+.dl-menu ul li:last-child {
+  margin-right: 0;
+}
+/* line 134, sass/breakpoints/_base.scss */
+.dl-menu ul li {
+  margin-right: 20px;
 }
 
 /* ==========================================================================
